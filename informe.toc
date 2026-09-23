@@ -4,11 +4,14 @@
 \contentsline {section}{\numberline {2}Diseño y construcción del circuito impreso}{2}{section.2}%
 \contentsline {section}{\numberline {3}Etapas del circuito y adaptación a fuente simple}{3}{section.3}%
 \contentsline {section}{\numberline {4}Excursión de salida y máxima señal de entrada}{4}{section.4}%
-\contentsline {section}{\numberline {6}Potenciómetros al máximo}{4}{section.6}%
-\contentsline {section}{\numberline {7}Potenciómetros al mínimo}{5}{section.7}%
-\contentsline {section}{\numberline {8}Potenciómetros a mitad de recorrido}{6}{section.8}%
-\contentsline {section}{\numberline {9}Barrido en frecuencia}{8}{section.9}%
-\contentsline {section}{\numberline {10}Medición de Slew Rate}{17}{section.10}%
-\contentsline {section}{\numberline {11}Vistas del PCB en el software de diseño}{18}{section.11}%
-\contentsline {section}{\numberline {12}Fotografías de la placa armada}{19}{section.12}%
-\contentsline {section}{Conclusiones}{19}{section*.22}%
+\contentsline {section}{\numberline {5}Cálculo de ganancias}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Ganancia en bajas frecuencias}{4}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Ganancia en altas frecuencias}{5}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Potenciómetros al máximo}{6}{section.6}%
+\contentsline {section}{\numberline {7}Potenciómetros al mínimo}{7}{section.7}%
+\contentsline {section}{\numberline {8}Potenciómetros a mitad de recorrido}{8}{section.8}%
+\contentsline {section}{\numberline {9}Barrido en frecuencia}{10}{section.9}%
+\contentsline {section}{\numberline {10}Medición de Slew Rate}{19}{section.10}%
+\contentsline {section}{\numberline {11}Vistas del PCB en el software de diseño}{20}{section.11}%
+\contentsline {section}{\numberline {12}Fotografías de la placa armada}{20}{section.12}%
+\contentsline {section}{Conclusiones}{20}{section*.24}%

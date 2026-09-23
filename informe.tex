@@ -10,6 +10,7 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{caption}
+\usepackage[americanresistors]{circuitikz}
 \usepackage{fancyhdr}
 \usepackage{float}
 \usepackage{graphicx}
@@ -17,6 +18,10 @@
 \usepackage{subcaption}
 \usepackage{tabularx}
 \usepackage{xcolor}
+\usepackage{siunitx}
+\sisetup{
+    output-decimal-marker = {,}
+}
 \usepackage{pgfplots}
 \usepackage[hidelinks]{hyperref}
 
@@ -144,45 +149,27 @@ informe no modifica ni falsea las dimensiones del diseño construido.}
 
 \section{Etapas del circuito y adaptación a fuente simple}
 
-El circuito se divide en las siguientes etapas:
+El circuito se divide en las siguientes 3 etapas:
 
 \begin{enumerate}
-    \item \textbf{Regulación y desacoplamiento.} U1 (LM78L12) reduce los
-    \(15\,\mathrm{V}\) de entrada a \(12\,\mathrm{V}\). C1 y C2 filtran la entrada del
-    regulador, mientras que C6, C7 y los restantes capacitores de desacoplamiento reducen el
-    ruido sobre la alimentación de los operacionales.
+    \item \textbf{Etapa de alimentación} Etapa consituída por el regulador de tensión
+        LM7812 (U1), encargado de proveer los 12 V a todo el circuito.
 
-    \item \textbf{Polarización y preamplificación.} R3 y R5, ambos de
-    \(100\,\mathrm{k\Omega}\), forman una referencia de continua:
-    \[
-        V_{\mathrm{ref}}=12\,\mathrm{V}
-        \frac{R5}{R3+R5}=6\,\mathrm{V}.
-    \]
-    C10 desacopla ese punto. La primera mitad del RC4558 se conecta como amplificador
-    inversor con R7 = R8 = \(10\,\mathrm{k\Omega}\), por lo que su ganancia de alterna es
-    \[
-        A_{v1}=-\frac{R8}{R7}=-1,
-        \qquad
-        v_{o1}(t)=6\,\mathrm{V}-v_i(t).
-    \]
-    C11 bloquea la continua de la fuente de señal y C9 acopla esta etapa al control de tonos.
+    \item \textbf{Etapa inversora} Su núcleo está compuesto por uno de los dos
+        amplificadores operacionales disponibles en el integrado RC4558 (U2B). La función de
+        esta etapa es invertir la señal de audio de entrada, ya que la etapa siguiente
+        también es inversora.
 
-    \item \textbf{Control Baxandall activo.} La segunda mitad del RC4558 trabaja con una red
+    \item \textbf{Control Baxandall} La segunda mitad del RC4558 trabaja con una red
     de realimentación selectiva. RV1, RV2, R1, R2, R4, R6 y los capacitores C4, C5, C12 y C13
-    modifican la realimentación según la frecuencia, permitiendo realce o atenuación en los
-    extremos de la banda.
-
-    \item \textbf{Acoplamiento de salida.} C8 elimina la componente continua de
-    \(6\,\mathrm{V}\) antes del conector de salida J2, de modo que la señal entregada a la
-    carga queda centrada en \(0\,\mathrm{V}\).
+    modifican la realimentación según la frecuencia, permitiendo realce o atenuación de
+    los tonos graves y agudos de la señal de audio de entrada.
 \end{enumerate}
 
-La modificación fundamental para operar con fuente simple es la creación de la referencia de
-\(6\,\mathrm{V}\). Con alimentación simétrica, las entradas no inversoras podrían conectarse
-a masa; con una única fuente, centrar internamente la señal en la mitad de la alimentación
-permite procesar ambos semiciclos sin que el semiciclo negativo sea recortado por masa. Los
-capacitores de entrada, interetapa y salida impiden que esa polarización de continua llegue a
-los equipos externos.
+La modificación fundamental para que el circuito pueda funcionar con fuente simple es la
+creación de la referencia de \(6\,\mathrm{V}\) mediante el divisor resistivo conformado
+por R3 y R5. Esto logra centrar la señal en la mitad de la alimentación, lo que  permite
+procesar ambos semiciclos sin que los mismos sean recortados.
 
 \section{Excursión de salida y máxima señal de entrada}
 
@@ -203,7 +190,207 @@ sin recorte y la pantalla del osciloscopio. No se asignan valores teóricos como
 medición.}
 
 % El punto 5 se omite por indicación expresa del usuario.
-\setcounter{section}{5}
+\section{Cálculo de ganancias}
+El potenciómetro RV1 del esquemático es el encargado de modificar la ganancia de las
+frecuencias bajas. Esto es debido a que los capacitores C12 y C13 se comportan como
+circuito abierto cuando están sometidos a frecuencias bajas, esto se justifica con la
+expresión de la reactancia capacitiva.
+
+\begin{equation}
+    X_C = \frac{1}{2\pi f C}
+    \label{eq:xcap}
+\end{equation}
+
+Si se aplica la misma ecuación pero en frecuencias altas, se puede decir que
+los capacitores se comportan como corto circuito en frecuencias elevadas; por
+lo que C4 y C5 puentean a RV1 en frecuencias altas. quedando como regulador de
+ganancia el potenciómetro RV2.
+
+\subsection{Ganancia en bajas frecuencias}
+
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}[font=\small]
+        \node[op amp] (U2A) at (6,0) {};
+
+        \draw
+            (0,3) node[ocirc] {}
+            node[left,align=right]{Entrada\\(desde C9)}
+            to[R,l^={$R_1$},a_={$10\,\mathrm{k}\Omega$}] (2,3)
+            to[R] (4,3)
+            to[R,l^={$R_2$},a_={$12\,\mathrm{k}\Omega$}] (7.2,3)
+            -- (8,3) node[ocirc] {}
+            node[right]{Salida};
+
+        \draw (7.2,3) to[short,*-] (7.2,0) -- (U2A.out);
+        \node[above=7pt,align=center] at (3,3)
+            {$RV_1$\\[-1pt]$100\,\mathrm{k}\Omega$};
+        \draw (3,2.15) to[R,l={$R_4$},a_={$10\,\mathrm{k}\Omega$}] (3,0.5)
+            -- (U2A.-);
+        \draw (3,2.15) -- (3,2.72);
+        \fill (3,2.85) -- (2.91,2.68) -- (3.09,2.68) -- cycle;
+
+        \draw (U2A.+) -- (3.7,-0.5) node[ocirc] {}
+            node[left] {$V_{\mathrm{ref}}\;(\sim 6\,\mathrm{V})$};
+
+        \node[align=center,font=\tiny] at (6.08,0.04) {$U2A$\\[-1.5pt]RC4558};
+        \node[above left=1pt] at (U2A.-) {2};
+        \node[below left=1pt] at (U2A.+) {3};
+        \node[above right=1pt] at (U2A.out) {1};
+    \end{circuitikz}
+    \caption{Equivalente resistivo del control de bajas frecuencias}
+    \label{fig:low-frequency-equivalent}
+\end{figure}
+
+De la fig. \ref{fig:low-frequency-equivalent} se puede observar que el circuito
+se simplifica a un inversor. Por lo tanto la ganancia se calcula como
+
+\begin{equation*}
+    Av = - \frac{R_f}{R}
+\end{equation*}
+
+\begin{itemize}
+    \item \textbf{RV1 con el cursor al mínimo}
+        \[
+        \begin{gathered}
+            Av = - \frac{R_2}{R_1 + RV_{1}} \\[2pt]
+            Av = - \frac{\SI{12}{\kilo\ohm}}{\SI{10}{\kilo\ohm} + \SI{100}{\kilo\ohm}} \\[2pt]
+            \boxed{Av = -0,109} \\[2pt]
+            \boxed{Av = \SI{-19{,}25}{\decibel}}
+        \end{gathered}
+        \]
+    \item \textbf{RV1 con el cursor al máximo}
+        \[
+        \begin{gathered}
+            Av = - \frac{RV_1 + R_2}{R_1} \\[2pt]
+            Av = - \frac{\SI{100}{\kilo\ohm} + \SI{12}{\kilo\ohm}}{\SI{10}{\kilo\ohm}} \\[2pt]
+            \boxed{Av = -11,2} \\[2pt]
+            \boxed{Av = \SI{20{,}98}{\decibel}}
+        \end{gathered}
+        \]
+\end{itemize}
+
+\subsection{Ganancia en altas frecuencias}
+
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}[font=\small]
+        \node[op amp] (U2AHF) at (6,0) {};
+
+        \draw
+            (0,3) node[ocirc] {}
+            node[left,align=right]{Entrada\\(desde C9)}
+            -- (0.8,3) coordinate (hfin)
+            to[R,l^={$R_1$},a_={$10\,\mathrm{k}\Omega$}] (3.4,3)
+            coordinate (hfr4)
+            to[R,l^={$R_2$},a_={$12\,\mathrm{k}\Omega$}] (7.2,3)
+            coordinate (hfout)
+            -- (8,3) node[ocirc] {}
+            node[right]{Salida};
+
+        \draw (hfout) to[short,*-] (7.2,0) -- (U2AHF.out);
+        \node[circ] at (7.2,0) {};
+        \draw (hfr4) to[short,*-] (3.4,2.5)
+            to[R,l={$R_4$},a_={$10\,\mathrm{k}\Omega$}] (3.4,0.5)
+            to[short,*-] (U2AHF.-);
+
+        \draw (3.4,0.5) -- (3.4,-0.8)
+            to[R,l={$R_6$},a_={$4{,}7\,\mathrm{k}\Omega$}] (3.4,-2.05)
+            -- (3.4,-2.52);
+
+        \draw (hfin) to[short,*-] (0.8,-2.8)
+            -- (2.4,-2.8)
+            to[R] (4.4,-2.8)
+            -- (7.2,-2.8) -- (hfout);
+        \node[below=7pt,align=center] at (3.4,-2.8)
+            {$RV_2$\\[-1pt]$100\,\mathrm{k}\Omega$};
+        \fill (3.4,-2.65) -- (3.31,-2.48) -- (3.49,-2.48) -- cycle;
+
+        \draw (U2AHF.+) -- (2.8,-0.5) node[ocirc] {}
+            node[left] {$V_{\mathrm{ref}}\;(\sim 6\,\mathrm{V})$};
+
+        \node[align=center,font=\tiny] at (6.08,0.04)
+            {$U2A$\\[-1.5pt]RC4558};
+        \node[above left=1pt] at (U2AHF.-) {2};
+        \node[below left=1pt] at (U2AHF.+) {3};
+        \node[above right=1pt] at (U2AHF.out) {1};
+    \end{circuitikz}
+    \caption{Equivalente resistivo del control de altas frecuencias}
+    \label{fig:high-frequency-equivalent}
+\end{figure}
+
+Para analizar este circuito es conveniente aplicar la ley de kirchoff de las
+corrientes en el nodo que une el terminal inversor del operacional con las
+resistencias R4 y R6. El análisis es sobre la señal de audio, por lo que las
+fuentes de corriente continua se pasivan.
+
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}[font=\small]
+        \node[op amp] (U2ANodal) at (6.2,0) {};
+        \coordinate (summing) at (3,0.5);
+
+        \draw (3,3) node[ocirc] {}
+            to[R] (summing)
+            to[short,*-] (U2ANodal.-);
+        \draw (summing)
+            to[R] (3,-2)
+            node[ocirc] {};
+        \node[right=5pt,align=left] at (3,1.75)
+            {$R_4$\\[-1pt]$10\,\mathrm{k}\Omega$};
+        \node[right=5pt,align=left] at (3,-0.75)
+            {$R_6$\\[-1pt]$4{,}7\,\mathrm{k}\Omega$};
+
+        \draw[-latex] (2.45,2.45) -- (2.45,1.15)
+            node[midway,left] {$I_{R_4}$};
+        \draw[-latex] (2.45,-1.45) -- (2.45,-0.15)
+            node[midway,left] {$I_{R_6}$};
+        \draw[-latex] (3.4,0.72) -- (4.7,0.72)
+            node[midway,above] {$I_i$};
+
+        \draw (U2ANodal.+) -- (4.85,-0.5) -- (4.85,-0.85)
+            node[ground] {};
+        \draw (U2ANodal.out) -- (7.5,0) node[ocirc] {};
+
+        \draw[-latex,densely dashed,utnblue] (0.65,0.75)
+            node[left,align=right,text=utnblue]{TV\\(tierra virtual)}
+            -- (2.82,0.55);
+
+        \node[align=center,font=\tiny] at (6.28,0.04)
+            {$U2A$\\[-1.5pt]RC4558};
+    \end{circuitikz}
+    \caption{Corrientes en el nodo de tierra virtual del amplificador operacional}
+    \label{fig:high-frequency-current-node}
+\end{figure}
+ 
+Por la figura se obtiene
+\[
+\begin{gathered}
+    I_{R_4} + I_{R_6} = I_i = 0 \\[2pt]
+    I_{R_4} = - I_{R_6} \\[2pt]
+\end{gathered}
+\]
+
+\begin{itemize}
+    \item \textbf{RV2 con el cursor al mínimo}
+        \[
+        \begin{gathered}
+            av = - \frac{r_2}{r_1 + rv_{1}} \\[2pt]
+            av = - \frac{\SI{12}{\kilo\ohm}}{\SI{10}{\kilo\ohm} + \SI{100}{\kilo\ohm}} \\[2pt]
+            \boxed{av = -0,109} \\[2pt]
+            \boxed{av = \SI{-19{,}25}{\decibel}}
+        \end{gathered}
+        \]
+    \item \textbf{RV2 con el cursor al máximo}
+        \[
+        \begin{gathered}
+            av = - \frac{rv_1 + r_2}{r_1} \\[2pt]
+            av = - \frac{\SI{100}{\kilo\ohm} + \SI{12}{\kilo\ohm}}{\SI{10}{\kilo\ohm}} \\[2pt]
+            \boxed{av = -11,2} \\[2pt]
+            \boxed{av = \SI{20{,}98}{\decibel}}
+        \end{gathered}
+        \]
+\end{itemize}
 
 \section{Potenciómetros al máximo}
 
@@ -256,6 +443,7 @@ temporal mucho menor que a \(20\,\mathrm{Hz}\).
     \caption{Capturas del osciloscopio con los potenciómetros al máximo.}
     \label{fig:max-scopes}
 \end{figure}
+
 
 \section{Potenciómetros al mínimo}
 
@@ -615,38 +803,34 @@ y el típico $\mathrm{2.2\ V /\mu s}$
 
 \section{Vistas del PCB en el software de diseño}
 
-Las Figuras~\ref{fig:pcb-front} y \ref{fig:pcb-rear} muestran las vistas superior e inferior
-generadas en KiCad. Se eliminó únicamente el fondo magenta de exportación y se conservó sin
-alteraciones el modelo de la placa.
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.96\textwidth]{PCB_Front.png}
-    \caption{Vista superior del PCB.}
-    \label{fig:pcb-front}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.96\textwidth]{PCB_Rear.png}
-    \caption{Vista inferior del PCB.}
-    \label{fig:pcb-rear}
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[trim=250 30 250 30,clip,width=\linewidth]{PCB_Front.png}
+        \caption{Vista superior del PCB.}
+        \label{fig:pcb-front}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[trim=250 30 250 30,clip,width=\linewidth]{PCB_Rear.png}
+        \caption{Vista inferior del PCB.}
+        \label{fig:pcb-rear}
+    \end{subfigure}
+    \caption{Vistas del modelo 3D del PCB generadas en KiCad.}
+    \label{fig:pcb-3d}
 \end{figure}
 
 \section{Fotografías de la placa armada}
 
-Las fotografías de la Figura~\ref{fig:real-pcb} documentan ambas caras del PCB construido. La
-vista superior permite verificar los componentes y las conexiones externas; la vista inferior
-muestra el trazado de cobre y las soldaduras de la placa.
-
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[t]{0.42\textwidth}
+    \begin{subfigure}[t]{0.27\textwidth}
         \centering
         \includegraphics[width=\linewidth]{PCB_Front_Real.jpg}
         \caption{Cara de componentes.}
-    \end{subfigure}\hfill
-    \begin{subfigure}[t]{0.42\textwidth}
+    \end{subfigure}\hspace{0.25\textwidth}
+    \begin{subfigure}[t]{0.27\textwidth}
         \centering
         \includegraphics[width=\linewidth]{PCB_Rear_Real.jpg}
         \caption{Cara de cobre y soldaduras.}
