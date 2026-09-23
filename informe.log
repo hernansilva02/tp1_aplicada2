@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2026.4.13)  22 SEP 2026 22:48
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2026.4.13)  23 SEP 2026 16:36
  restricted system commands enabled.
 **informe.tex
 (./informe.tex
@@ -1037,7 +1037,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip65
 )
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 91
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 82
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
@@ -1054,31 +1054,31 @@ LaTeX Info: Redefining \% on input line 22.
 )
 \openout1 = informe.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 9
-1.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 8
+2.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1114,8 +1114,8 @@ LaTeX Font Info:    ... okay on input line 91.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \. on input line 91.
-LaTeX Info: Redefining \% on input line 91.
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1142,19 +1142,19 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 91.
-Package microtype Info: Applying patch `item' on input line 91.
-Package microtype Info: Applying patch `toc' on input line 91.
-Package microtype Info: Applying patch `eqnum' on input line 91.
-Package microtype Info: Applying patch `footnote' on input line 91.
-Package microtype Info: Applying patch `verbatim' on input line 91.
+LaTeX Info: Redefining \microtypecontext on input line 82.
+Package microtype Info: Applying patch `item' on input line 82.
+Package microtype Info: Applying patch `toc' on input line 82.
+Package microtype Info: Applying patch `eqnum' on input line 82.
+Package microtype Info: Applying patch `footnote' on input line 82.
+Package microtype Info: Applying patch `verbatim' on input line 82.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 91.
+LaTeX Info: Redefining \showhyphens on input line 82.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
@@ -1169,12 +1169,12 @@ File: translations-basic-dictionary-spanish.trsl (spanish translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `spanish'. on input line 91.
+or `spanish'. on input line 82.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring OFF on input line 91.
+Package hyperref Info: Link coloring OFF on input line 82.
 (./informe.out) (./informe.out)
 \@outlinefile=\write4
 
@@ -1241,7 +1241,7 @@ LaTeX Info: Redefining \% on input line 1.
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-16.
+07.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1256,338 +1256,337 @@ warning  (file ../sch.pdf) (pdf inclusion): PDF inclusion: found PDF version '1.
 <../sch.pdf, id=101, page=1, 845.04684pt x 597.50787pt>
 File: ../sch.pdf Graphic file (type pdf)
 <use ../sch.pdf, page 1>
-Package luatex.def Info: ../sch.pdf , page1 used on input line 136.
+Package luatex.def Info: ../sch.pdf , page1 used on input line 121.
 (luatex.def)             Requested size: 489.10307pt x 345.83455pt.
 [2
 
-] [3<../sch.pdf>] [4]
+]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [5] [6]
-<pot_max_f20hz_pto6.png, id=149, 556.32843pt x 464.4853pt>
+ [3<../sch.pdf>] [4] [5] [6] [7] [8]
+<pot_max_f20hz_pto6.png, id=167, 556.32843pt x 464.4853pt>
 File: pot_max_f20hz_pto6.png Graphic file (type png)
 <use pot_max_f20hz_pto6.png>
-Package luatex.def Info: pot_max_f20hz_pto6.png  used on input line 428.
+Package luatex.def Info: pot_max_f20hz_pto6.png  used on input line 548.
 (luatex.def)             Requested size: 234.76738pt x 196.01096pt.
-<pot_max_f600hz_pto6.png, id=150, 541.27219pt x 408.02437pt>
+<pot_max_f600hz_pto6.png, id=168, 541.27219pt x 408.02437pt>
 File: pot_max_f600hz_pto6.png Graphic file (type png)
 <use pot_max_f600hz_pto6.png>
-Package luatex.def Info: pot_max_f600hz_pto6.png  used on input line 433.
+Package luatex.def Info: pot_max_f600hz_pto6.png  used on input line 553.
 (luatex.def)             Requested size: 234.76738pt x 176.97241pt.
-<pot_max_f20khz_pto6.png, id=151, 536.75531pt x 385.44pt>
+<pot_max_f20khz_pto6.png, id=169, 536.75531pt x 385.44pt>
 File: pot_max_f20khz_pto6.png Graphic file (type png)
 <use pot_max_f20khz_pto6.png>
-Package luatex.def Info: pot_max_f20khz_pto6.png  used on input line 440.
+Package luatex.def Info: pot_max_f20khz_pto6.png  used on input line 560.
 (luatex.def)             Requested size: 234.76738pt x 168.58253pt.
-<pot_min_f20hz_pto7.png, id=152, 539.76656pt x 434.37282pt>
+<pot_min_f20hz_pto7.png, id=170, 539.76656pt x 434.37282pt>
 File: pot_min_f20hz_pto7.png Graphic file (type png)
 <use pot_min_f20hz_pto7.png>
-Package luatex.def Info: pot_min_f20hz_pto7.png  used on input line 474.
+Package luatex.def Info: pot_min_f20hz_pto7.png  used on input line 594.
 (luatex.def)             Requested size: 234.76738pt x 188.93076pt.
-<pot_min_f600hz_pto7.png, id=153, 555.57562pt x 434.37282pt>
+<pot_min_f600hz_pto7.png, id=171, 555.57562pt x 434.37282pt>
 File: pot_min_f600hz_pto7.png Graphic file (type png)
 <use pot_min_f600hz_pto7.png>
-Package luatex.def Info: pot_min_f600hz_pto7.png  used on input line 479.
+Package luatex.def Info: pot_min_f600hz_pto7.png  used on input line 599.
 (luatex.def)             Requested size: 234.76738pt x 183.54883pt.
-<pot_min_f20khz_pto7.png, id=154, 450.9347pt x 356.83313pt>
+<pot_min_f20khz_pto7.png, id=172, 450.9347pt x 356.83313pt>
 File: pot_min_f20khz_pto7.png Graphic file (type png)
 <use pot_min_f20khz_pto7.png>
-Package luatex.def Info: pot_min_f20khz_pto7.png  used on input line 486.
+Package luatex.def Info: pot_min_f20khz_pto7.png  used on input line 606.
 (luatex.def)             Requested size: 234.76738pt x 185.77753pt.
- [7<./pot_max_f20hz_pto6.png><./pot_max_f600hz_pto6.png><./pot_max_f20khz_pto6.p
+ [9<./pot_max_f20hz_pto6.png><./pot_max_f600hz_pto6.png><./pot_max_f20khz_pto6.p
 ng>]
-<pot_mid_f20hz_pto8.png, id=165, 559.33969pt x 422.32782pt>
+<pot_mid_f20hz_pto8.png, id=183, 559.33969pt x 422.32782pt>
 File: pot_mid_f20hz_pto8.png Graphic file (type png)
 <use pot_mid_f20hz_pto8.png>
-Package luatex.def Info: pot_mid_f20hz_pto8.png  used on input line 514.
+Package luatex.def Info: pot_mid_f20hz_pto8.png  used on input line 634.
 (luatex.def)             Requested size: 234.76738pt x 177.26047pt.
-<pot_mid_f600hz_pto8.png, id=166, 517.935pt x 365.11406pt>
+<pot_mid_f600hz_pto8.png, id=184, 517.935pt x 365.11406pt>
 File: pot_mid_f600hz_pto8.png Graphic file (type png)
 <use pot_mid_f600hz_pto8.png>
-Package luatex.def Info: pot_mid_f600hz_pto8.png  used on input line 519.
+Package luatex.def Info: pot_mid_f600hz_pto8.png  used on input line 639.
 (luatex.def)             Requested size: 234.76738pt x 165.4976pt.
-<pot_mid_f20khz_pto8.png, id=167, 501.37312pt x 389.20406pt>
+<pot_mid_f20khz_pto8.png, id=185, 501.37312pt x 389.20406pt>
 File: pot_mid_f20khz_pto8.png Graphic file (type png)
 <use pot_mid_f20khz_pto8.png>
-Package luatex.def Info: pot_mid_f20khz_pto8.png  used on input line 526.
+Package luatex.def Info: pot_mid_f20khz_pto8.png  used on input line 646.
 (luatex.def)             Requested size: 234.76738pt x 182.24297pt.
- [8<./pot_min_f20hz_pto7.png><./pot_min_f600hz_pto7.png><./pot_min_f20khz_pto7.p
-ng>]
-Package pgfplots info on input line 557: Using 'lua backend=false' for axis: xm
+ [10<./pot_min_f20hz_pto7.png><./pot_min_f600hz_pto7.png><./pot_min_f20khz_pto7.
+png>]
+Package pgfplots info on input line 677: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
- [9<./pot_mid_f20hz_pto8.png><./pot_mid_f600hz_pto8.png><./pot_mid_f20khz_pto8.p
-ng>] [10]
-<freq_sweep_pot_min_1.jpeg, id=193, 1485.55pt x 1152.305pt>
+ [11<./pot_mid_f20hz_pto8.png><./pot_mid_f600hz_pto8.png><./pot_mid_f20khz_pto8.
+png>] [12]
+<freq_sweep_pot_min_1.jpeg, id=210, 1485.55pt x 1152.305pt>
 File: freq_sweep_pot_min_1.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_1.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_1.jpeg  used on input line 612.
+Package luatex.def Info: freq_sweep_pot_min_1.jpeg  used on input line 732.
 (luatex.def)             Requested size: 220.09488pt x 170.71077pt.
-<freq_sweep_pot_min_2.jpeg, id=194, 1377.145pt x 1096.095pt>
+<freq_sweep_pot_min_2.jpeg, id=211, 1377.145pt x 1096.095pt>
 File: freq_sweep_pot_min_2.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_2.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_2.jpeg  used on input line 613.
+Package luatex.def Info: freq_sweep_pot_min_2.jpeg  used on input line 733.
 (luatex.def)             Requested size: 220.09488pt x 175.16135pt.
-<freq_sweep_pot_min_3.jpeg, id=195, 1397.22pt x 1128.215pt>
+<freq_sweep_pot_min_3.jpeg, id=212, 1397.22pt x 1128.215pt>
 File: freq_sweep_pot_min_3.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_3.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_3.jpeg  used on input line 616.
+Package luatex.def Info: freq_sweep_pot_min_3.jpeg  used on input line 736.
 (luatex.def)             Requested size: 220.09488pt x 177.71202pt.
-<freq_sweep_pot_min_4.jpeg, id=196, 1421.31pt x 1152.305pt>
+<freq_sweep_pot_min_4.jpeg, id=213, 1421.31pt x 1152.305pt>
 File: freq_sweep_pot_min_4.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_4.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_4.jpeg  used on input line 617.
+Package luatex.def Info: freq_sweep_pot_min_4.jpeg  used on input line 737.
 (luatex.def)             Requested size: 220.09488pt x 178.4296pt.
-<freq_sweep_pot_min_5.jpeg, id=197, 1437.37pt x 1152.305pt>
+<freq_sweep_pot_min_5.jpeg, id=214, 1437.37pt x 1152.305pt>
 File: freq_sweep_pot_min_5.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_5.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_5.jpeg  used on input line 620.
+Package luatex.def Info: freq_sweep_pot_min_5.jpeg  used on input line 740.
 (luatex.def)             Requested size: 220.09488pt x 176.44275pt.
-<freq_sweep_pot_min_6.jpeg, id=198, 1397.22pt x 1120.185pt>
+<freq_sweep_pot_min_6.jpeg, id=215, 1397.22pt x 1120.185pt>
 File: freq_sweep_pot_min_6.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_6.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_6.jpeg  used on input line 621.
+Package luatex.def Info: freq_sweep_pot_min_6.jpeg  used on input line 741.
 (luatex.def)             Requested size: 220.09488pt x 176.44716pt.
- [11
+ [13
 
 <./freq_sweep_pot_min_1.jpeg><./freq_sweep_pot_min_2.jpeg><./freq_sweep_pot_min_
 3.jpeg><./freq_sweep_pot_min_4.jpeg><./freq_sweep_pot_min_5.jpeg><./freq_sweep_p
 ot_min_6.jpeg>]
-<freq_sweep_pot_min_7.jpeg, id=204, 1606.0pt x 1289.81876pt>
+<freq_sweep_pot_min_7.jpeg, id=221, 1606.0pt x 1289.81876pt>
 File: freq_sweep_pot_min_7.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_7.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_7.jpeg  used on input line 629.
+Package luatex.def Info: freq_sweep_pot_min_7.jpeg  used on input line 749.
 (luatex.def)             Requested size: 220.09488pt x 176.75528pt.
-<freq_sweep_pot_min_8.jpeg, id=205, 1381.16pt x 1140.26pt>
+<freq_sweep_pot_min_8.jpeg, id=222, 1381.16pt x 1140.26pt>
 File: freq_sweep_pot_min_8.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_8.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_8.jpeg  used on input line 630.
+Package luatex.def Info: freq_sweep_pot_min_8.jpeg  used on input line 750.
 (luatex.def)             Requested size: 220.09488pt x 181.69717pt.
-<freq_sweep_pot_min_9.jpeg, id=206, 1401.235pt x 1100.11pt>
+<freq_sweep_pot_min_9.jpeg, id=223, 1401.235pt x 1100.11pt>
 File: freq_sweep_pot_min_9.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_9.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_9.jpeg  used on input line 633.
+Package luatex.def Info: freq_sweep_pot_min_9.jpeg  used on input line 753.
 (luatex.def)             Requested size: 220.09488pt x 172.78143pt.
-<freq_sweep_pot_min_10.jpeg, id=207, 1332.98pt x 1055.945pt>
+<freq_sweep_pot_min_10.jpeg, id=224, 1332.98pt x 1055.945pt>
 File: freq_sweep_pot_min_10.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_10.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_10.jpeg  used on input line 634.
+Package luatex.def Info: freq_sweep_pot_min_10.jpeg  used on input line 754.
 (luatex.def)             Requested size: 220.09488pt x 174.35231pt.
-<freq_sweep_pot_min_11.jpeg, id=208, 1385.175pt x 1076.02pt>
+<freq_sweep_pot_min_11.jpeg, id=225, 1385.175pt x 1076.02pt>
 File: freq_sweep_pot_min_11.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_11.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_11.jpeg  used on input line 637.
+Package luatex.def Info: freq_sweep_pot_min_11.jpeg  used on input line 757.
 (luatex.def)             Requested size: 220.09488pt x 170.96815pt.
-<freq_sweep_pot_min_12.jpeg, id=209, 1489.565pt x 1188.44pt>
+<freq_sweep_pot_min_12.jpeg, id=226, 1489.565pt x 1188.44pt>
 File: freq_sweep_pot_min_12.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_min_12.jpeg>
-Package luatex.def Info: freq_sweep_pot_min_12.jpeg  used on input line 638.
+Package luatex.def Info: freq_sweep_pot_min_12.jpeg  used on input line 758.
 (luatex.def)             Requested size: 220.09488pt x 175.59259pt.
-
-[12
+ [14
 
 <./freq_sweep_pot_min_7.jpeg><./freq_sweep_pot_min_8.jpeg><./freq_sweep_pot_min_
 9.jpeg><./freq_sweep_pot_min_10.jpeg><./freq_sweep_pot_min_11.jpeg><./freq_sweep
 _pot_min_12.jpeg>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 648.
+(caption)                particular \caption on input line 768.
 See the caption package documentation for explanation.
 
-<freq_sweep_pot_max_1.jpeg, id=215, 1381.16pt x 1088.065pt>
+<freq_sweep_pot_max_1.jpeg, id=232, 1381.16pt x 1088.065pt>
 File: freq_sweep_pot_max_1.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_1.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_1.jpeg  used on input line 674.
+Package luatex.def Info: freq_sweep_pot_max_1.jpeg  used on input line 794.
 (luatex.def)             Requested size: 220.09488pt x 173.38005pt.
-<freq_sweep_pot_max_2.jpeg, id=216, 1324.95pt x 1076.02pt>
+<freq_sweep_pot_max_2.jpeg, id=233, 1324.95pt x 1076.02pt>
 File: freq_sweep_pot_max_2.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_2.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_2.jpeg  used on input line 675.
+Package luatex.def Info: freq_sweep_pot_max_2.jpeg  used on input line 795.
 (luatex.def)             Requested size: 220.09488pt x 178.7342pt.
-<freq_sweep_pot_max_3.jpeg, id=217, 1296.845pt x 1031.855pt>
+<freq_sweep_pot_max_3.jpeg, id=234, 1296.845pt x 1031.855pt>
 File: freq_sweep_pot_max_3.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_3.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_3.jpeg  used on input line 678.
+Package luatex.def Info: freq_sweep_pot_max_3.jpeg  used on input line 798.
 (luatex.def)             Requested size: 220.09488pt x 175.11388pt.
-<freq_sweep_pot_max_4.jpeg, id=218, 1389.19pt x 1136.245pt>
+<freq_sweep_pot_max_4.jpeg, id=235, 1389.19pt x 1136.245pt>
 File: freq_sweep_pot_max_4.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_4.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_4.jpeg  used on input line 679.
+Package luatex.def Info: freq_sweep_pot_max_4.jpeg  used on input line 799.
 (luatex.def)             Requested size: 220.09488pt x 180.01712pt.
-<freq_sweep_pot_max_5.jpeg, id=219, 1606.0pt x 1293.83376pt>
+<freq_sweep_pot_max_5.jpeg, id=236, 1606.0pt x 1293.83376pt>
 File: freq_sweep_pot_max_5.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_5.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_5.jpeg  used on input line 682.
+Package luatex.def Info: freq_sweep_pot_max_5.jpeg  used on input line 802.
 (luatex.def)             Requested size: 220.09488pt x 177.30548pt.
-<freq_sweep_pot_max_6.jpeg, id=220, 1308.89pt x 1047.915pt>
+<freq_sweep_pot_max_6.jpeg, id=237, 1308.89pt x 1047.915pt>
 File: freq_sweep_pot_max_6.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_6.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_6.jpeg  used on input line 683.
+Package luatex.def Info: freq_sweep_pot_max_6.jpeg  used on input line 803.
 (luatex.def)             Requested size: 220.09488pt x 176.2084pt.
-[13
+[15
 
-] [14<./freq_sweep_pot_max_1.jpeg><./freq_sweep_pot_max_2.jpeg><./freq_sweep_pot
+] [16<./freq_sweep_pot_max_1.jpeg><./freq_sweep_pot_max_2.jpeg><./freq_sweep_pot
 _max_3.jpeg><./freq_sweep_pot_max_4.jpeg><./freq_sweep_pot_max_5.jpeg><./freq_sw
 eep_pot_max_6.jpeg>]
-<freq_sweep_pot_max_7.jpeg, id=232, 1457.445pt x 1176.395pt>
+<freq_sweep_pot_max_7.jpeg, id=249, 1457.445pt x 1176.395pt>
 File: freq_sweep_pot_max_7.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_7.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_7.jpeg  used on input line 691.
+Package luatex.def Info: freq_sweep_pot_max_7.jpeg  used on input line 811.
 (luatex.def)             Requested size: 220.09488pt x 177.63635pt.
-<freq_sweep_pot_max_8.jpeg, id=233, 1341.01pt x 1112.155pt>
+<freq_sweep_pot_max_8.jpeg, id=250, 1341.01pt x 1112.155pt>
 File: freq_sweep_pot_max_8.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_8.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_8.jpeg  used on input line 692.
+Package luatex.def Info: freq_sweep_pot_max_8.jpeg  used on input line 812.
 (luatex.def)             Requested size: 220.09488pt x 182.53036pt.
-<freq_sweep_pot_max_9.jpeg, id=234, 1481.535pt x 1208.515pt>
+<freq_sweep_pot_max_9.jpeg, id=251, 1481.535pt x 1208.515pt>
 File: freq_sweep_pot_max_9.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_9.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_9.jpeg  used on input line 695.
+Package luatex.def Info: freq_sweep_pot_max_9.jpeg  used on input line 815.
 (luatex.def)             Requested size: 220.09488pt x 179.51758pt.
-<freq_sweep_pot_max_10.jpeg, id=235, 1425.325pt x 1180.41pt>
+<freq_sweep_pot_max_10.jpeg, id=252, 1425.325pt x 1180.41pt>
 File: freq_sweep_pot_max_10.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_10.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_10.jpeg  used on input line 696.
+Package luatex.def Info: freq_sweep_pot_max_10.jpeg  used on input line 816.
 (luatex.def)             Requested size: 220.09488pt x 182.2592pt.
-<freq_sweep_pot_max_11.jpeg, id=236, 1606.0pt x 1311.90125pt>
+<freq_sweep_pot_max_11.jpeg, id=253, 1606.0pt x 1311.90125pt>
 File: freq_sweep_pot_max_11.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_11.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_11.jpeg  used on input line 699.
+Package luatex.def Info: freq_sweep_pot_max_11.jpeg  used on input line 819.
 (luatex.def)             Requested size: 220.09488pt x 179.78143pt.
-<freq_sweep_pot_max_12.jpeg, id=237, 1365.1pt x 1096.095pt>
+<freq_sweep_pot_max_12.jpeg, id=254, 1365.1pt x 1096.095pt>
 File: freq_sweep_pot_max_12.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_max_12.jpeg>
-Package luatex.def Info: freq_sweep_pot_max_12.jpeg  used on input line 700.
+Package luatex.def Info: freq_sweep_pot_max_12.jpeg  used on input line 820.
 (luatex.def)             Requested size: 220.09488pt x 176.71678pt.
- [15
+ [17
 
 <./freq_sweep_pot_max_7.jpeg><./freq_sweep_pot_max_8.jpeg><./freq_sweep_pot_max_
 9.jpeg><./freq_sweep_pot_max_10.jpeg><./freq_sweep_pot_max_11.jpeg><./freq_sweep
 _pot_max_12.jpeg>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 709.
+(caption)                particular \caption on input line 829.
 See the caption package documentation for explanation.
 
-[16
+[18
 
 ]
-<freq_sweep_pot_mid_1.jpeg, id=248, 1606.0pt x 1287.81125pt>
+<freq_sweep_pot_mid_1.jpeg, id=265, 1606.0pt x 1287.81125pt>
 File: freq_sweep_pot_mid_1.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_1.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_1.jpeg  used on input line 736.
+Package luatex.def Info: freq_sweep_pot_mid_1.jpeg  used on input line 856.
 (luatex.def)             Requested size: 220.09488pt x 176.48016pt.
-<freq_sweep_pot_mid_2.jpeg, id=249, 1557.82pt x 1232.605pt>
+<freq_sweep_pot_mid_2.jpeg, id=266, 1557.82pt x 1232.605pt>
 File: freq_sweep_pot_mid_2.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_2.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_2.jpeg  used on input line 737.
+Package luatex.def Info: freq_sweep_pot_mid_2.jpeg  used on input line 857.
 (luatex.def)             Requested size: 220.09488pt x 174.14339pt.
-<freq_sweep_pot_mid_3.jpeg, id=250, 1405.25pt x 1120.185pt>
+<freq_sweep_pot_mid_3.jpeg, id=267, 1405.25pt x 1120.185pt>
 File: freq_sweep_pot_mid_3.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_3.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_3.jpeg  used on input line 740.
+Package luatex.def Info: freq_sweep_pot_mid_3.jpeg  used on input line 860.
 (luatex.def)             Requested size: 220.09488pt x 175.43869pt.
-<freq_sweep_pot_mid_4.jpeg, id=251, 1606.0pt x 1492.57625pt>
+<freq_sweep_pot_mid_4.jpeg, id=268, 1606.0pt x 1492.57625pt>
 File: freq_sweep_pot_mid_4.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_4.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_4.jpeg  used on input line 741.
+Package luatex.def Info: freq_sweep_pot_mid_4.jpeg  used on input line 861.
 (luatex.def)             Requested size: 220.09488pt x 204.54092pt.
-<freq_sweep_pot_mid_5.jpeg, id=252, 1324.95pt x 1088.065pt>
+<freq_sweep_pot_mid_5.jpeg, id=269, 1324.95pt x 1088.065pt>
 File: freq_sweep_pot_mid_5.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_5.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_5.jpeg  used on input line 744.
+Package luatex.def Info: freq_sweep_pot_mid_5.jpeg  used on input line 864.
 (luatex.def)             Requested size: 220.09488pt x 180.73495pt.
-<freq_sweep_pot_mid_6.jpeg, id=253, 1606.0pt x 1263.72125pt>
+<freq_sweep_pot_mid_6.jpeg, id=270, 1606.0pt x 1263.72125pt>
 File: freq_sweep_pot_mid_6.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_6.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_6.jpeg  used on input line 745.
+Package luatex.def Info: freq_sweep_pot_mid_6.jpeg  used on input line 865.
 (luatex.def)             Requested size: 220.09488pt x 173.17891pt.
- [17
+ [19
 
 <./freq_sweep_pot_mid_1.jpeg><./freq_sweep_pot_mid_2.jpeg><./freq_sweep_pot_mid_
 3.jpeg><./freq_sweep_pot_mid_4.jpeg><./freq_sweep_pot_mid_5.jpeg><./freq_sweep_p
 ot_mid_6.jpeg>]
-<freq_sweep_pot_mid_7.jpeg, id=259, 1606.0pt x 1306.8825pt>
+<freq_sweep_pot_mid_7.jpeg, id=276, 1606.0pt x 1306.8825pt>
 File: freq_sweep_pot_mid_7.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_7.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_7.jpeg  used on input line 753.
+Package luatex.def Info: freq_sweep_pot_mid_7.jpeg  used on input line 873.
 (luatex.def)             Requested size: 220.09488pt x 179.09367pt.
-<freq_sweep_pot_mid_8.jpeg, id=260, 1341.01pt x 1108.14pt>
+<freq_sweep_pot_mid_8.jpeg, id=277, 1341.01pt x 1108.14pt>
 File: freq_sweep_pot_mid_8.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_8.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_8.jpeg  used on input line 754.
+Package luatex.def Info: freq_sweep_pot_mid_8.jpeg  used on input line 874.
 (luatex.def)             Requested size: 220.09488pt x 181.8714pt.
-<freq_sweep_pot_mid_9.jpeg, id=261, 1421.31pt x 1140.26pt>
+<freq_sweep_pot_mid_9.jpeg, id=278, 1421.31pt x 1140.26pt>
 File: freq_sweep_pot_mid_9.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_9.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_9.jpeg  used on input line 757.
+Package luatex.def Info: freq_sweep_pot_mid_9.jpeg  used on input line 877.
 (luatex.def)             Requested size: 220.09488pt x 176.56448pt.
-<freq_sweep_pot_mid_10.jpeg, id=262, 1606.0pt x 1240.635pt>
+<freq_sweep_pot_mid_10.jpeg, id=279, 1606.0pt x 1240.635pt>
 File: freq_sweep_pot_mid_10.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_10.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_10.jpeg  used on input line 758.
+Package luatex.def Info: freq_sweep_pot_mid_10.jpeg  used on input line 878.
 (luatex.def)             Requested size: 220.09488pt x 170.01518pt.
-<freq_sweep_pot_mid_11.jpeg, id=263, 1606.0pt x 1267.73625pt>
+<freq_sweep_pot_mid_11.jpeg, id=280, 1606.0pt x 1267.73625pt>
 File: freq_sweep_pot_mid_11.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_11.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_11.jpeg  used on input line 761.
+Package luatex.def Info: freq_sweep_pot_mid_11.jpeg  used on input line 881.
 (luatex.def)             Requested size: 220.09488pt x 173.72911pt.
-<freq_sweep_pot_mid_12.jpeg, id=264, 1606.0pt x 1281.78876pt>
+<freq_sweep_pot_mid_12.jpeg, id=281, 1606.0pt x 1281.78876pt>
 File: freq_sweep_pot_mid_12.jpeg Graphic file (type jpg)
 <use freq_sweep_pot_mid_12.jpeg>
-Package luatex.def Info: freq_sweep_pot_mid_12.jpeg  used on input line 762.
+Package luatex.def Info: freq_sweep_pot_mid_12.jpeg  used on input line 882.
 (luatex.def)             Requested size: 220.09488pt x 175.65485pt.
- [18
+ [20
 
 <./freq_sweep_pot_mid_7.jpeg><./freq_sweep_pot_mid_8.jpeg><./freq_sweep_pot_mid_
 9.jpeg><./freq_sweep_pot_mid_10.jpeg><./freq_sweep_pot_mid_11.jpeg><./freq_sweep
 _pot_mid_12.jpeg>]
-<Slew_Rate.jpg, id=270, 1557.82pt x 1216.545pt>
+<Slew_Rate.jpg, id=288, 1557.82pt x 1216.545pt>
 File: Slew_Rate.jpg Graphic file (type jpg)
 <use Slew_Rate.jpg>
-Package luatex.def Info: Slew_Rate.jpg  used on input line 795.
+Package luatex.def Info: Slew_Rate.jpg  used on input line 914.
 (luatex.def)             Requested size: 430.41309pt x 336.11948pt.
-<PCB_Front.png, id=271, 1729.46124pt x 897.3525pt>
+<PCB_Front.png, id=289, 1729.46124pt x 897.3525pt>
 File: PCB_Front.png Graphic file (type png)
 <use PCB_Front.png>
-Package luatex.def Info: PCB_Front.png  used on input line 810.
+Package luatex.def Info: PCB_Front.png  used on input line 929.
 (luatex.def)             Requested size: 234.76738pt x 160.0905pt.
-<PCB_Rear.png, id=273, 1729.46124pt x 897.3525pt>
+<PCB_Rear.png, id=291, 1729.46124pt x 897.3525pt>
 File: PCB_Rear.png Graphic file (type png)
 <use PCB_Rear.png>
-Package luatex.def Info: PCB_Rear.png  used on input line 816.
+Package luatex.def Info: PCB_Rear.png  used on input line 935.
 (luatex.def)             Requested size: 234.76738pt x 160.0905pt.
- [19
+ [21
 
 <./Slew_Rate.jpg>]
-<PCB_Front_Real.jpg, id=280, 908.95288pt x 1285.82396pt>
+<PCB_Front_Real.jpg, id=298, 908.95288pt x 1285.82396pt>
 File: PCB_Front_Real.jpg Graphic file (type jpg)
 <use PCB_Front_Real.jpg>
-Package luatex.def Info: PCB_Front_Real.jpg  used on input line 830.
+Package luatex.def Info: PCB_Front_Real.jpg  used on input line 949.
 (luatex.def)             Requested size: 132.0599pt x 186.80267pt.
-<PCB_Rear_Real.jpg, id=281, 646.54973pt x 1149.52953pt>
+<PCB_Rear_Real.jpg, id=299, 646.54973pt x 1149.52953pt>
 File: PCB_Rear_Real.jpg Graphic file (type jpg)
 <use PCB_Rear_Real.jpg>
-Package luatex.def Info: PCB_Rear_Real.jpg  used on input line 835.
+Package luatex.def Info: PCB_Rear_Real.jpg  used on input line 954.
 (luatex.def)             Requested size: 132.0599pt x 234.7956pt.
 
-[20<./PCB_Front.png><./PCB_Rear.png><./PCB_Front_Real.jpg><./PCB_Rear_Real.jpg>] [21] (./informe.aux
+[22<./PCB_Front.png><./PCB_Rear.png><./PCB_Front_Real.jpg><./PCB_Rear_Real.jpg>] [23] (./informe.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 6124414F3247CECD5CB6C2F56876AD9B;3257.
+(rerunfilecheck)             Checksum: EC03968E1A869DDA3A873714D041ACBC;3257.
 )
 
 Here is how much of LuaTeX's memory you used:
- 58614 strings out of 478285
+ 59226 strings out of 478285
  125240,2373549 words of node,token memory allocated
- 697 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 6 glue, 6 kern, 1 penalty, 3 glyph, 42
- attribute, 57 glue_spec, 23 attribute_list, 2 write nodes
-   avail lists: 2:6865,3:1864,4:73,5:522,6:63,7:6667,8:44,9:1304,10:17,11:654
- 77157 multiletter control sequences out of 65536+600000
+ 711 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 6 glue, 4 kern, 1 penalty, 3 glyph, 50
+ attribute, 57 glue_spec, 27 attribute_list, 2 write nodes
+   avail lists: 2:7136,3:1888,4:64,5:414,6:63,7:5457,8:47,9:1478,10:17,11:453
+ 77763 multiletter control sequences out of 65536+600000
  74 fonts using 4696703 bytes
  115i,19n,111p,1003b,2357s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/
@@ -1595,26 +1594,27 @@ texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-dist/fon
 ts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/tex-gyre/qhvb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/te
-x-gyre/qhvr.pfb>
-Output written on informe.pdf (22 pages, 16283319 bytes).
+cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/tex-gyre/qhvb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tex-gyre/
+qhvr.pfb>
+Output written on informe.pdf (24 pages, 16302225 bytes).
 
-PDF statistics: 374 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
- 67 named destinations out of 1000 (max. 131072)
+PDF statistics: 394 PDF objects out of 1000 (max. 8388607)
+ 279 compressed objects within 3 object streams
+ 73 named destinations out of 1000 (max. 131072)
  164 words of extra memory for PDF output out of 10000 (max. 100000000)
 

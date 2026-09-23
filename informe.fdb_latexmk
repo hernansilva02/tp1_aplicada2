@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1790128131.97668 "informe.tex" "informe.pdf" "informe" 1790128136.17366 0
+["lualatex"] 1790192175.61648 "informe.tex" "informe.pdf" "informe" 1790192179.96095 0
   "../sch.pdf" 1789589015.63881 35062 df61cb5d40274b8f8a67ae89e1d9f70e ""
   "/home/hernan/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1763963408.45272 127322 7b3ec560cedc6cf6328543c6b83749ed ""
   "/home/hernan/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1763963408.35572 207534 2ab023a2c17e51c8bd3abdf4e33771d3 ""
@@ -46,6 +46,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qhvr.tfm" 1254269485 1560 753cb451b29683799c3de4bf174f308f ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb" 1248133631 34793 87a84b12f86dfd35a1cf1bb142b75602 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
@@ -379,10 +380,10 @@
   "freq_sweep_pot_min_7.jpeg" 1789823685.0995 304943 0ad1dde5b0d7f4b461482a2927ea10ef ""
   "freq_sweep_pot_min_8.jpeg" 1789823688.79323 271500 b850316898b0e3e96e196fd4c4e7ef8e ""
   "freq_sweep_pot_min_9.jpeg" 1789823703.54931 254272 3df56dbc66b9e149041a73d4b768a422 ""
-  "informe.aux" 1790128135.76544 10485 30cc14a6aed6e4814ef58a9b3c8ade14 "lualatex"
-  "informe.out" 1790128135.7697 3257 6124414f3247cecd5cb6c2f56876ad9b "lualatex"
-  "informe.tex" 1790128126.02411 30343 4fad2b008c80a28f0dc0e09b5d8b90af ""
-  "informe.toc" 1790128135.7708 1411 5a09884370f6620c09263db5c4b6f40b "lualatex"
+  "informe.aux" 1790192179.57262 11470 d0a4c94049fc214b5d2d47fed692ec88 "lualatex"
+  "informe.out" 1790192179.57532 3257 ec03968e1a869dda3a873714d041acbc "lualatex"
+  "informe.tex" 1790192174.0667 34963 48bf708e3c3cb7e85154c698298afa05 ""
+  "informe.toc" 1790192179.57602 1412 273f07f2f5db937d78551dc047c9e792 "lualatex"
   "pot_max_f20hz_pto6.png" 1789816617.02895 459103 c9acf2dba2e22f82c6762b8a4cde42cf ""
   "pot_max_f20khz_pto6.png" 1789816683.71992 361440 93e71a2ce0317fd3150adb323948299f ""
   "pot_max_f600hz_pto6.png" 1789816667.04127 418322 988c015419e5a980af42dbc1bb58ff30 ""

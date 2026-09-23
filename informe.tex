@@ -47,15 +47,6 @@
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-\newcommand{\pendingbox}[1]{%
-    \begin{center}
-    \fcolorbox{alertred}{softgray}{%
-        \begin{minipage}{0.91\linewidth}
-        \textbf{Pendiente de documentación.} #1
-        \end{minipage}}
-    \end{center}
-}
-
 \newcommand{\measurementtable}[1]{%
     \begin{table}[H]
     \centering
@@ -121,15 +112,9 @@ los controles antes de efectuar las mediciones sobre la placa.
 La consigna solicita específicamente una captura de la simulación realizada en TINA. No se
 incluye una imagen sustituta porque no existe una captura de TINA entre los archivos provistos.
 
-\pendingbox{Adjuntar la captura de TINA donde se vean el circuito, la configuración del
-análisis y las señales o curvas obtenidas. El archivo disponible es de LTspice y no reemplaza
-esa evidencia solicitada.}
-
 \section{Diseño y construcción del circuito impreso}
 
-El esquema y el circuito impreso se desarrollaron en KiCad. La alimentación de entrada se
-filtra y regula con U1; el trazado separa la sección de alimentación de la ruta de audio y
-mantiene próximos al RC4558 sus capacitores de desacoplamiento.
+Para la construcción del circuito se utilizó una placa de 10 mm por 5 mm.
 
 \begin{figure}[H]
     \centering
@@ -137,15 +122,6 @@ mantiene próximos al RC4558 sus capacitores de desacoplamiento.
     \caption{Esquema eléctrico implementado en KiCad.}
     \label{fig:schematic}
 \end{figure}
-
-El archivo de PCB disponible define una placa rectangular nominal de
-\(100\,\mathrm{mm}\times 50\,\mathrm{mm}\). Aunque su superficie es de
-\(50\,\mathrm{cm^2}\), uno de sus lados es menor que los \(70\,\mathrm{mm}\) indicados por
-la consigna para una dimensión mínima de \(7\,\mathrm{cm}\times 7\,\mathrm{cm}\).
-
-\pendingbox{Confirmar con la cátedra si el requisito se evalúa por superficie o por cada lado.
-Si se exige que ambos lados midan al menos \(70\,\mathrm{mm}\), debe corregirse el PCB; el
-informe no modifica ni falsea las dimensiones del diseño construido.}
 
 \section{Etapas del circuito y adaptación a fuente simple}
 
@@ -172,24 +148,33 @@ por R3 y R5. Esto logra centrar la señal en la mitad de la alimentación, lo qu
 procesar ambos semiciclos sin que los mismos sean recortados.
 
 \section{Excursión de salida y máxima señal de entrada}
+El datasheet del operacional RC4558 indica que la tensión de salida del mismo
+es aproximadamente $V_{CC} \pm \SI{1}{\volt}$; la alimentación en este caso es
+$+\SI{12}{\volt}$ y $\SI{0}{\volt}$, por lo que
 
-Para esta medición debe aumentarse la amplitud del generador hasta observar el comienzo del
-recorte y registrar los extremos de la salida. Si los límites medidos son
-\(V_{o,\max}\) y \(V_{o,\min}\), la máxima amplitud senoidal sin distorsión queda limitada
-por el menor margen respecto del punto de reposo:
 \[
-    V_{o,p,\max}=\min\left(V_{o,\max}-V_{\mathrm{ref}},
-    V_{\mathrm{ref}}-V_{o,\min}\right).
+\begin{gathered}
+    V_{oMax} = \SI{11}{\volt} \\
+    V_{oMin} = \SI{1}{\volt}
+\end{gathered}
 \]
-La máxima entrada se obtiene dividiendo ese valor por la máxima ganancia absoluta del circuito
-en la condición evaluada.
 
-\pendingbox{No se encontró una tabla ni una captura correspondiente a esta prueba en el
-directorio del informe. Deben incorporarse \(V_{o,\max}\), \(V_{o,\min}\), la máxima entrada
-sin recorte y la pantalla del osciloscopio. No se asignan valores teóricos como si fueran una
-medición.}
+Para lograr alimentar con fuente simple al cricuito, los operacionales
+utilizados poseen una referencia de $\SI{6}{\volt}$, por lo tanto solo se puede
+excursionar $\pm \SI{5}{\volt}$ para que los semiciclos de la señal no sean
+distorsionados.\par
+Como se demosatrará en el punto 5, la mayor ganancia del circuito ocurre con
+las frecuencias bajas, donde Av es 11,2, por lo tanto el
+máximo nivel de señal de entrada se puede calcular como
 
-% El punto 5 se omite por indicación expresa del usuario.
+\[
+\begin{gathered}
+    V_i = \frac{Vo_{max}}{Av} \\[2pt]
+    V_i = \frac{\SI{5}{\volt}p}{11,2} \\[2pt]
+    \boxed{V_i = \SI{0{,}446}{\volt}p}
+\end{gathered}
+\]
+
 \section{Cálculo de ganancias}
 El potenciómetro RV1 del esquemático es el encargado de modificar la ganancia de las
 frecuencias bajas. Esto es debido a que los capacitores C12 y C13 se comportan como
@@ -290,6 +275,7 @@ se simplifica a un inversor. Por lo tanto la ganancia se calcula como
 
         \draw (hfout) to[short,*-] (7.2,0) -- (U2AHF.out);
         \node[circ] at (7.2,0) {};
+        \node[above=5pt] at (hfr4) {$A$};
         \draw (hfr4) to[short,*-] (3.4,2.5)
             to[R,l={$R_4$},a_={$10\,\mathrm{k}\Omega$}] (3.4,0.5)
             to[short,*-] (U2AHF.-);
@@ -364,30 +350,164 @@ fuentes de corriente continua se pasivan.
 \end{figure}
  
 Por la figura se obtiene
+
+\begin{equation*}
+    I_{R_4} + I_{R_6} = I_i = 0
+\end{equation*}
+
+\begin{equation}
+    I_{R_4} = - I_{R_6}
+    \label{eq:vi}
+\end{equation}
+
+Además, al aplicar la misma ley en el nodo A de la fig.
+\ref{fig:high-frequency-equivalent}
+
 \[
 \begin{gathered}
-    I_{R_4} + I_{R_6} = I_i = 0 \\[2pt]
-    I_{R_4} = - I_{R_6} \\[2pt]
+    I_{R_1} + I_{R_2} = I_{R_4} \\[2pt]
+    \frac{V_i - V_A}{R_1} + \frac{V_o - V_A}{R_2} = I_{R_4} \\[2pt]
+    \frac{V_i}{R1} - \frac{V_A}{R1} + \frac{V_o}{R2} - \frac{V_A}{R_2} = \frac{V_A}{R_4}
 \end{gathered}
 \]
 
+Despejando $V_A$ se llega a la expresión
+
+\begin{equation}
+    V_A = \frac{V_i}{\frac{R1}{R_4} + \frac{R1}{R2} + 1} + \frac{V_o}{\frac{R2}{R_4} + \frac{R2}{R1} + 1} 
+    \label{eq:va}
+\end{equation}
+
+Teniendo en cuenta la posición del cursor del potenciómetro RV2 y reemplazando
+(\ref{eq:va}) en (\ref{eq:vi}) se pueden llegar a los siguientes 2 resultados
+%\newpage
+
 \begin{itemize}
     \item \textbf{RV2 con el cursor al mínimo}
+        \begin{figure}[H]
+            \centering
+            \begin{circuitikz}[font=\small]
+                \node[op amp] (U2AHFMin) at (6,0) {};
+
+                \draw
+                    (0,3) node[ocirc] {}
+                    node[left,align=right]{$V_i$}
+                    -- (0.8,3) coordinate (hfminin)
+                    to[R,l^={$R_1$},a_={$10\,\mathrm{k}\Omega$}] (3.4,3)
+                    coordinate (hfmina)
+                    to[R,l^={$R_2$},a_={$12\,\mathrm{k}\Omega$}] (7.2,3)
+                    coordinate (hfminout)
+                    -- (8,3) node[ocirc] {}
+                    node[right]{$V_o$};
+
+                \draw (hfminout) to[short,*-] (7.2,0) -- (U2AHFMin.out);
+                \node[circ] at (7.2,0) {};
+                \node[above=5pt] at (hfmina) {$A$};
+
+                \draw (hfmina) to[short,*-] (3.4,2.5)
+                    to[R,l={$R_4$},a_={$10\,\mathrm{k}\Omega$}] (3.4,0.5)
+                    to[short,*-] (U2AHFMin.-);
+                \draw (3.4,0.5) -- (3.4,-0.8)
+                    to[R,l={$R_6$},a_={$4{,}7\,\mathrm{k}\Omega$}] (3.4,-2.3)
+                    -- (3.4,-2.8);
+
+                \draw (hfminin) to[short,*-] (0.8,-2.8)
+                    -- (1.1,-2.8)
+                    to[R,l={$RV_2$},a_={$100\,\mathrm{k}\Omega$}] (3.1,-2.8)
+                    -- (3.4,-2.8) coordinate (hfminb)
+                    -- (7.2,-2.8) -- (hfminout);
+                \node[circ] at (hfminb) {};
+                \node[below=5pt] at (hfminb) {$B$};
+
+                \draw (U2AHFMin.+) -- ++(-0.45,0) coordinate (gndMin);
+                \draw (gndMin) -- ++(0,-0.45) node[ground] {};
+
+                \node[align=center,font=\tiny] at (6.08,0.04)
+                    {$U2A$\\[-1.5pt]RC4558};
+                \node[above left=1pt] at (U2AHFMin.-) {2};
+                \node[below left=1pt] at (U2AHFMin.+) {3};
+                \node[above right=1pt] at (U2AHFMin.out) {1};
+            \end{circuitikz}
+            \caption{Equivalente resistivo de altas frecuencias con el cursor de RV2
+            desplazado completamente hacia la derecha}
+            \label{fig:high-frequency-rv2-min}
+        \end{figure}
+
+        Se puede ver que el nodo $V_B = V_o$. Entonces
+
         \[
         \begin{gathered}
-            av = - \frac{r_2}{r_1 + rv_{1}} \\[2pt]
-            av = - \frac{\SI{12}{\kilo\ohm}}{\SI{10}{\kilo\ohm} + \SI{100}{\kilo\ohm}} \\[2pt]
-            \boxed{av = -0,109} \\[2pt]
-            \boxed{av = \SI{-19{,}25}{\decibel}}
+            \frac{\frac{V_i}{\frac{R1}{R_4} + \frac{R1}{R2} + 1} + \frac{V_o}{\frac{R2}{R_4} + \frac{R2}{R1} + 1}}{R_4} = -\frac{V_o}{R_6} \\[2pt]
+            \frac{V_i}{\frac{R_1 R_4}{R_2} + R_1 + R_4} + \frac{V_o}{\frac{R_2 R_4}{R1} + R_2 + R_4} = -\frac{V_o}{R_6} \\[2pt]
+            \frac{Vo}{Vi} = \frac{1}{\left(\frac{R_2 R_4}{R_1} + R_1 + R_4\right)\left(- \frac{1}{\frac{R_2 R_4}{R_1} + R_2 + R_4} - \frac{1}{R_6}\right)} \\[2pt]
+            \boxed{Av = -0{,}146} \\[2pt]
+            \boxed{Av = \SI{-16{,}71}{\decibel}}
         \end{gathered}
         \]
+    \newpage
+
     \item \textbf{RV2 con el cursor al máximo}
+
+        En este caso sucede algo similar al anterior, con la
+        diferencia de que ahora el nodo B está conectado directamente en la
+        entrada, es decir, $V_B = V_i$.
+
+        \begin{figure}[H]
+            \centering
+            \begin{circuitikz}[font=\small]
+                \node[op amp] (U2AHFMax) at (6,0) {};
+
+                \draw
+                    (0,3) node[ocirc] {}
+                    node[left] {$V_i$}
+                    -- (0.8,3) coordinate (hfmaxin)
+                    to[R,l^={$R_1$},a_={$10\,\mathrm{k}\Omega$}] (3.4,3)
+                    coordinate (hfmaxa)
+                    to[R,l^={$R_2$},a_={$12\,\mathrm{k}\Omega$}] (7.2,3)
+                    coordinate (hfmaxout)
+                    -- (8,3) node[ocirc] {}
+                    node[right] {$V_o$};
+
+                \draw (hfmaxout) to[short,*-] (7.2,0) -- (U2AHFMax.out);
+                \node[circ] at (7.2,0) {};
+                \node[above=5pt] at (hfmaxa) {$A$};
+
+                \draw (hfmaxa) to[short,*-] (3.4,2.5)
+                    to[R,l={$R_4$},a_={$10\,\mathrm{k}\Omega$}] (3.4,0.5)
+                    to[short,*-] (U2AHFMax.-);
+                \draw (3.4,0.5) -- (3.4,-0.8)
+                    to[R,l={$R_6$},a_={$4{,}7\,\mathrm{k}\Omega$}] (3.4,-2.3)
+                    -- (3.4,-2.8) coordinate (hfmaxb);
+
+                \draw (hfmaxin) to[short,*-] (0.8,-2.8)
+                    -- (hfmaxb)
+                    -- (3.7,-2.8)
+                    to[R,l={$RV_2$},a_={$100\,\mathrm{k}\Omega$}] (5.7,-2.8)
+                    -- (7.2,-2.8) -- (hfmaxout);
+                \node[circ] at (hfmaxb) {};
+                \node[below=5pt] at (hfmaxb) {$B$};
+
+                \draw (U2AHFMax.+) -- ++(-0.45,0) coordinate (gndMax);
+                \draw (gndMax) -- ++(0,-0.45) node[ground] {};
+
+                \node[align=center,font=\tiny] at (6.08,0.04)
+                    {$U2A$\\[-1.5pt]RC4558};
+                \node[above left=1pt] at (U2AHFMax.-) {2};
+                \node[below left=1pt] at (U2AHFMax.+) {3};
+                \node[above right=1pt] at (U2AHFMax.out) {1};
+            \end{circuitikz}
+            \caption{Equivalente resistivo de altas frecuencias con el cursor de RV2
+            desplazado completamente hacia la izquierda}
+            \label{fig:high-frequency-rv2-max}
+        \end{figure}
+
         \[
         \begin{gathered}
-            av = - \frac{rv_1 + r_2}{r_1} \\[2pt]
-            av = - \frac{\SI{100}{\kilo\ohm} + \SI{12}{\kilo\ohm}}{\SI{10}{\kilo\ohm}} \\[2pt]
-            \boxed{av = -11,2} \\[2pt]
-            \boxed{av = \SI{20{,}98}{\decibel}}
+            \frac{\frac{V_i}{\frac{R1}{R_4} + \frac{R1}{R2} + 1} + \frac{V_o}{\frac{R2}{R_4} + \frac{R2}{R1} + 1}}{R_4} = -\frac{V_i}{R_6} \\[2pt]
+            \frac{V_i}{\frac{R_1 R_4}{R_2} + R_1 + R_4} + \frac{V_o}{\frac{R_2 R_4}{R1} + R_2 + R_4} = -\frac{V_i}{R_6} \\[2pt]
+            \frac{Vo}{Vi} = \left(-\frac{1}{R_6} - \frac{1}{\frac{R_1 R_4}{R_2} + R_1 + R_4}\right) \left(\frac{R_2 R_4}{R_1} + R_2 + R_4\right) \\[2pt]
+            \boxed{Av = -8{,}434} \\[2pt]
+            \boxed{Av = \SI{18{,}52}{\decibel}}
         \end{gathered}
         \]
 \end{itemize}
@@ -560,7 +680,7 @@ determinación cuantitativa de fase a partir de la captura.
             (500,2.07) (1000,1.24) (2000,1.53) (5000,6.19)
             (10000,10.39) (12000,11.87) (15000,13.57) (20000,13.98)
         };
-        \addlegendentry{Mínimo}
+        \addlegendentry{Máximo}
 
         \addplot[color=black,mark=square*] coordinates {
             (20,-1.45) (50,-7.47) (100,-9.21) (200,-9.21)
@@ -574,7 +694,7 @@ determinación cuantitativa de fase a partir de la captura.
             (500,-9.21) (1000,-11.40) (2000,-14.32) (5000,-16.26)
             (10000,-16.26) (12000,-16.26) (15000,-16.26) (20000,-16.26)
         };
-        \addlegendentry{Máximo}
+        \addlegendentry{Mínimo}
         \end{axis}
     \end{tikzpicture}
     \caption{Respuesta en frecuencia obtenida de las tablas de medición.}
@@ -583,8 +703,8 @@ determinación cuantitativa de fase a partir de la captura.
 
 \begin{table}[H]
     \centering
-    \caption{Barrido con los potenciómetros al mínimo.}
-    \label{tab:sweep-min}
+    \caption{Barrido con los potenciómetros al máximo.}
+    \label{tab:sweep-max}
     \small
     \begin{tabular}{r r r r}
         \toprule
@@ -619,8 +739,8 @@ determinación cuantitativa de fase a partir de la captura.
     \vspace{0.7em}
     \minsweepcapture{5}{500\,\mathrm{Hz}}\hfill
     \minsweepcapture{6}{1\,\mathrm{kHz}}
-    \caption{Capturas del barrido mínimo, mediciones 1 a 6.}
-    \label{fig:sweep-min-1-6}
+    \caption{Capturas del barrido máximo, mediciones 1 a 6.}
+    \label{fig:sweep-max-1-6}
 \end{figure}
 
 \clearpage
@@ -636,8 +756,8 @@ determinación cuantitativa de fase a partir de la captura.
     \vspace{0.7em}
     \minsweepcapture{11}{15\,\mathrm{kHz}}\hfill
     \minsweepcapture{12}{20\,\mathrm{kHz}}
-    \caption{Capturas del barrido mínimo, mediciones 7 a 12.}
-    \label{fig:sweep-min-7-12}
+    \caption{Capturas del barrido máximo, mediciones 7 a 12.}
+    \label{fig:sweep-max-7-12}
 \end{figure}
 
 \clearpage
@@ -645,8 +765,8 @@ determinación cuantitativa de fase a partir de la captura.
     \begin{minipage}[t]{0.47\textwidth}
         \vspace{0pt}
         \centering
-        \captionof{table}{Barrido con los potenciómetros al máximo.}
-        \label{tab:sweep-max}
+        \captionof{table}{Barrido con los potenciómetros al mínimo.}
+        \label{tab:sweep-min}
         \footnotesize
         \begin{tabular}{r r r r}
             \toprule
@@ -681,8 +801,8 @@ determinación cuantitativa de fase a partir de la captura.
     \vspace{0.7em}
     \maxsweepcapture{5}{500\,\mathrm{Hz}}\hfill
     \maxsweepcapture{6}{1\,\mathrm{kHz}}
-    \caption{Capturas del barrido máximo, mediciones 1 a 6.}
-    \label{fig:sweep-max-1-6}
+    \caption{Capturas del barrido mínimo, mediciones 1 a 6.}
+    \label{fig:sweep-min-1-6}
 \end{figure}
 
 \clearpage
@@ -698,8 +818,8 @@ determinación cuantitativa de fase a partir de la captura.
     \vspace{0.7em}
     \maxsweepcapture{11}{15\,\mathrm{kHz}}\hfill
     \maxsweepcapture{12}{20\,\mathrm{kHz}}
-    \caption{Capturas del barrido máximo, mediciones 7 a 12.}
-    \label{fig:sweep-max-7-12}
+    \caption{Capturas del barrido mínimo, mediciones 7 a 12.}
+    \label{fig:sweep-min-7-12}
 \end{figure}
 \clearpage
 \begin{center}
@@ -767,11 +887,10 @@ determinación cuantitativa de fase a partir de la captura.
 \clearpage
 
 La respuesta medida cubre desde \(-18{,}76\,\mathrm{dB}\) hasta
-\(13{,}98\,\mathrm{dB}\). En la posición rotulada como mínima se obtiene realce en ambos
+\(13{,}98\,\mathrm{dB}\). En la posición máxima se obtiene realce en ambos
 extremos de la banda; en la posición media la respuesta se aproxima a \(0\,\mathrm{dB}\) por
-encima de \(2\,\mathrm{kHz}\), mientras que la posición rotulada como máxima presenta
-atenuación en todo el barrido. Esta descripción reproduce los datos entregados sin reasignar
-las posiciones de los potenciómetros.
+encima de \(2\,\mathrm{kHz}\), mientras que la posición mínima presenta atenuación en todo
+el barrido.
 
 \section{Medición de Slew Rate}
 
